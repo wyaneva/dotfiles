@@ -1,0 +1,8 @@
+XTerm*eightBitInput: false
+XTerm*saveLines: 4096
+
+XTerm*background: black
+XTerm*foreground: white
+
+xterm*faceName: Liberation Mono:size=11:antialias=true
+xterm*font: 7x13

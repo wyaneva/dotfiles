@@ -1,0 +1,9 @@
+*.tmp
+*.swp
+
+vim.symlink/bundle
+vim.symlink/autoload
+vim.symlink/.netrwhist*
+
+# Compiled python classes
+*.pyc

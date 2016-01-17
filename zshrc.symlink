@@ -1,0 +1,30 @@
+ZSH=${HOME}/dotfiles
+
+typeset -U config_files
+config_files=(${ZSH}/**/*.zsh)
+
+# Requires package 'zsh-syntax-highlighting'
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# Load everything but the completion files
+for file in ${${config_files}:#*/completion.zsh}
+do
+  source ${file}
+done
+
+# Change XTERM title & set 256-colours
+case ${TERM} in
+  xterm*)
+    export TERM=xterm-256color
+    precmd () {print -Pn "\e]0;%n@%m: %~\a"}
+    ;;
+esac
+
+autoload -Uz compinit
+compinit
+
+# Load every completion after autocomplete loads
+for file in ${(M)config_files:#*/completion.zsh}
+do
+  source ${file}
+done
