@@ -126,6 +126,9 @@ let g:clipbrdDefaultReg = '*'  " set clipboard register to '*'
 " Exit insert mode by typing jk
 inoremap jk <Esc>
 
+" Use <Space> to execute macros
+nnoremap <Space> @q
+
 " Swap ` and ' to jump to markers
 nnoremap ' `
 nnoremap ` '
