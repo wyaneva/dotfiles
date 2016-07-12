@@ -41,8 +41,10 @@ vim_time_prompt() {
   colour1=$white
   colour2=$bwhite
   colour3=$grey
-  PROMPT='${colour1}[$colour2%D{%H:%M}$colour1] $vim_mode $colour1($colour2%n$colour1)%#$normal '
-  RPROMPT="$colour1($colour2%~$colour1)$normal"
+  colour4=$normal
+  PROMPT='${colour4}[$colour4%D{%H:%M}$colour4] $vim_mode $colour4($colour4%n$colour4)%#$normal '
+  RPROMPT='${colour1}[$colour2%D{%H:%M}$colour1] $vim_mode $colour1($colour2%n$colour1)%#$normal '
+  RPROMPT1="$colour1($colour2%~$colour1)$normal"
   RPROMPT2="$colour1($colour2%~$colour1)$normal"
 }
 

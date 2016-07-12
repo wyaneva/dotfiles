@@ -27,17 +27,17 @@ call plug#begin(g:editor_root."/bundle")
 " Plugins
 " Plug 'tpope/vim-repeat'
 " Plug 'tpope/vim-unimpaired'
-" Plug 'frasercrmck/formative.vim'
-" Plug 'Valloric/YouCompleteMe', {
-"       \   'do': './install.py --clang-completer --system-libclang',
-"       \   'for': [ 'c', 'cpp' ]
-"       \ }
+ Plug 'frasercrmck/formative.vim'
+ Plug 'Valloric/YouCompleteMe', {
+       \   'do': './install.py --clang-completer',
+       \   'for': [ 'c', 'cpp' ]
+       \ }
 
 " Colour schemes:
 Plug 'whatyouhide/vim-gotham'
 
 " Syntax files:
-" Plug 'frasercrmck/opencl.vim', { 'for': 'opencl' }
+Plug 'frasercrmck/opencl.vim', { 'for': 'opencl' }
 
 call plug#end()
 
@@ -82,7 +82,7 @@ set wildignore=*.o,*.obj.*.exe " ignore binaries when listing files
 
 set wildcharm=<Tab>            " Allow <Tab> to complete in mappings
 
-set mouse=a                    " enable mouse support
+set mouse=nvc                  " enable mouse support, except in insert mode
 
 set nohidden                   " when I close a tab, remove the buffer
 
@@ -234,17 +234,17 @@ endif
 "                     You Complete Me Configuration                       "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-" let g:ycm_confirm_extra_conf = 0
-" let g:ycm_min_num_of_chars_for_completion = 99
+ let g:ycm_confirm_extra_conf = 0
+ let g:ycm_min_num_of_chars_for_completion = 99
 
 " Perform the 'most sensible' GoTo operation on the word under the cursor
-" nnoremap <silent> gf :<C-U>YcmCompleter GoTo<CR>
+ nnoremap <silent> gf :<C-U>YcmCompleter GoTo<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                       Formative Configuration                           "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-" let g:fmtv_clang_format_py = g:editor_root.'/clang-format.py'
+let g:fmtv_clang_format_py = g:editor_root.'/clang-format.py'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                         Auto Commands                                   "
@@ -274,3 +274,23 @@ au BufReadPost *
     \ if line("'\"") > 0 && line("'\"") <= line("$") && &filetype != "gitcommit" |
         \ execute("normal `\"") |
     \ endif
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                         Latex-Suite                                     "
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" REQUIRED. This makes vim invoke Latex-Suite when you open a tex file.
+filetype plugin on
+
+" IMPORTANT: grep will sometimes skip displaying the file name if you
+" search in a singe file. This will confuse Latex-Suite. Set your grep
+" program to always generate a file-name.
+set grepprg=grep\ -nH\ $*
+
+" OPTIONAL: This enables automatic indentation as you type.
+filetype indent on
+
+" OPTIONAL: Starting with Vim 7, the filetype of empty .tex files defaults to
+" 'plaintex' instead of 'tex', which results in vim-latex not being loaded.
+" The following changes the default filetype back to 'tex':
+let g:tex_flavor='latex'
