@@ -86,7 +86,7 @@ TexLet g:Tex_DebugLog = ''
 "if has('macunix')
 	TexLet g:Tex_DefaultTargetFormat = 'pdf'
 "else
-	TexLet g:Tex_DefaultTargetFormat = 'dvi'
+"	TexLet g:Tex_DefaultTargetFormat = 'dvi'
 "endif
 
 " A comma seperated list of formats which need multiple compilations to be
@@ -759,5 +759,5 @@ set sw=2
 " all the figure labels. Very useful!
 set iskeyword+=:
 """""""""""""""""""""""""""""""""""""""""""""""""
-nmap v <Leader>ll
+nmap vv <Leader>ll
 
