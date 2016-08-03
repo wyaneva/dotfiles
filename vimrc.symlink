@@ -92,10 +92,10 @@ set relativenumber             " show line numbers as relative offsets
 set smartcase                  " match case if pattern contains upper case chars
 set ignorecase                 " case-insensitive matches
 
-set hlsearch                   " highlight all search matches
+"set hlsearch                   " highlight all search matches
 set incsearch                  " incremental search
 
-set cursorline                 " highlight the current line
+"set cursorline                 " highlight the current line
 
 set completeopt=menu,menuone   " insert-mode completion menu
 
@@ -134,7 +134,7 @@ nnoremap ' `
 nnoremap ` '
 
 " Set <Leader> to space key
-let mapleader = " "
+" let mapleader = " "
 
 " Search for word under cursor, but don't jump to it
 nnoremap <Leader>* :let @/='\<<C-R>=expand("<cword>")<CR>\>'<CR>:set hls<CR>
