@@ -120,6 +120,7 @@ execute 'set backupdir='.g:editor_root.'/backup'
 set clipboard=unnamed          " Use the '*' register
 let g:clipbrdDefaultReg = '*'  " set clipboard register to '*'
 
+setlocal spell spelllang=en_gb " spellcheck
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                               Mappings                                  "
