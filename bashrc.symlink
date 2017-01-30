@@ -11,3 +11,11 @@ PS1='[\u@\h \W]\$ '
 alias grepc='grep --color -nRHi'
 
 IGNOREEOF=1
+
+if ! pgrep -u "$USER" ssh-agent > /dev/null; then
+    ssh-agent > ~/.ssh-agent-thing
+fi
+if [[ "$SSH_AGENT_PID" == "" ]]; then
+    eval "$(<~/.ssh-agent-thing)"
+fi
+
