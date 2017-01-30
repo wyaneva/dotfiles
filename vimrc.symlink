@@ -95,7 +95,7 @@ set ignorecase                 " case-insensitive matches
 set hlsearch                   " highlight all search matches
 set incsearch                  " incremental search
 
-set cursorline                 " highlight the current line
+"set cursorline                 " highlight the current line
 
 set completeopt=menu,menuone   " insert-mode completion menu
 
@@ -118,6 +118,7 @@ execute 'set backupdir='.g:editor_root.'/backup'
 set clipboard=unnamed          " Use the '*' register
 let g:clipbrdDefaultReg = '*'  " set clipboard register to '*'
 
+setlocal spell spelllang=en_gb " spellcheck
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                               Mappings                                  "
@@ -134,7 +135,7 @@ nnoremap ' `
 nnoremap ` '
 
 " Set <Leader> to space key
-let mapleader = " "
+" let mapleader = " "
 
 " Search for word under cursor, but don't jump to it
 nnoremap <Leader>* :let @/='\<<C-R>=expand("<cword>")<CR>\>'<CR>:set hls<CR>
