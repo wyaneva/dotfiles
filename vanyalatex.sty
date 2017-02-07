@@ -1,0 +1,59 @@
+% Vanya Yaneva - 2016
+%
+% A latex packages which provides my custom Latex commands and styles.
+%
+
+\ProvidesPackage{vanyalatex}
+\RequirePackage{listings}
+
+%Colours
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+ 
+%C code
+\lstdefinestyle{customc}{
+  backgroundcolor=\color{backcolour},   
+  numberstyle=\tiny\color{codegray},
+  basicstyle=\footnotesize\ttfamily,
+  keywordstyle=\bfseries\color{green!40!black},
+  commentstyle=\itshape\color{purple!40!black},
+  stringstyle=\color{orange},
+  belowcaptionskip=1\baselineskip,
+  breaklines=true,
+%  frame=L,
+%  frame=tb,
+  xleftmargin=\parindent,
+  language=C,
+  showstringspaces=false,
+  numbers=left,                    
+  numbersep=5pt,                  
+  language=C,
+  aboveskip=3mm,
+  belowskip=3mm,
+%  showstringspaces=false,
+%  columns=flexible,
+%  breakatwhitespace=true
+}
+
+% Text files
+\lstdefinestyle{customtext}{
+  backgroundcolor=\color{white},   
+  keywordstyle=\color{black},
+  breakatwhitespace=false,         
+  breaklines=true,                 
+}
+
+%TODOs
+\newcommand{\todov}[1]{{\par\noindent\small\color{red} \framebox{\parbox{\dimexpr\linewidth-2\fboxsep-2\fboxrule}{\textbf{TODO:} #1}}}}
+
+%Questions
+\newcommand{\qs}[1]{{\color{red} {\textbf{???} #1 \textbf{???}}}}
+
+\endinput
+
+% End of file 'vanyalates.sty'
