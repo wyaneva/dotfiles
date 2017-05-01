@@ -5,6 +5,32 @@
 
 \ProvidesPackage{vanyalatex}
 \RequirePackage{listings}
+\RequirePackage{tikz}
+\usetikzlibrary{shapes.geometric,calc}
+
+%Rating stars
+\newcommand\score[2]{
+  \pgfmathsetmacro\pgfxa{#1+1}
+
+  \tikzstyle{scorestars}=[star, star points=5, star point ratio=2.25, draw, inner sep=0.15em,anchor=outer point 3]
+
+  \begin{tikzpicture}[baseline]
+    \foreach \i in {1,...,#2} {
+      \pgfmathparse{(\i<=#1?"blue!70":"lightgray")}
+      \edef\starcolor{\pgfmathresult}
+      \draw (\i*1em,0) node[name=star\i,scorestars,fill=\starcolor]  {};
+   }
+    \pgfmathparse{(#1>int(#1)?int(#1+1):0}
+    \let\partstar=\pgfmathresult
+    \ifnum\partstar>0
+      \pgfmathsetmacro\starpart{#1-(int(#1))}
+      \path [clip] ($(star\partstar.outer point 3)!(star\partstar.outer  point  2)!(star\partstar.outer point 4)$) rectangle 
+      ($(star\partstar.outer point 2 |- star\partstar.outer point   1)!\starpart!(star\partstar.outer point 1 -| star\partstar.outer point 5)$);
+      \fill (\partstar*1em,0) node[scorestars,fill=blue!70]  {};
+    \fi,
+
+  \end{tikzpicture}
+}
 
 %Colours
 \definecolor{dkgreen}{rgb}{0,0.6,0}
