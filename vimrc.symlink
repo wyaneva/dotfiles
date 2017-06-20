@@ -245,7 +245,7 @@ endif
 "                       Formative Configuration                           "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-let g:fmtv_clang_format_py = g:editor_root.'/clang-format.py'
+let g:clang_format_path = '/usr/lib/llvm-3.8/bin/clang-format'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                         Auto Commands                                   "

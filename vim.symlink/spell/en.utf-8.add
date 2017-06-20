@@ -19,3 +19,6 @@ fbital00
 puwmod01
 CodeGen
 texttt
+ComputeCpp
+sycl
+accessor
