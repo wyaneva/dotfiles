@@ -246,7 +246,7 @@ endif
 "                       Formative Configuration                           "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-let g:clang_format_path = '/usr/lib/llvm-3.8/bin/clang-format'
+let g:clang_format_path = '/usr/bin/clang-format'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                         Auto Commands                                   "
