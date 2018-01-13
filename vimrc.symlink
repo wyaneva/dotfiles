@@ -119,6 +119,7 @@ set clipboard=unnamed          " Use the '*' register
 let g:clipbrdDefaultReg = '*'  " set clipboard register to '*'
 
 setlocal spell spelllang=en_gb " spellcheck
+autocmd FileType c,cpp setlocal nospell " turn off spellcheck for source files
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                               Mappings                                  "
