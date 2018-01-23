@@ -1,0 +1,20 @@
+# to be put inside /etc/netctl
+
+Description='eduroam network'
+Interface=<INTERFACE> # eg. wlp4s0
+Connection=wireless
+Security=wpa-configsection
+ESSID=eduroam
+IP=dhcp
+WPAConfigSection=(
+    'ssid="eduroam"'
+    'key_mgmt=WPA-EAP'
+    'eap=PEAP'
+    'proto=WPA2'
+    'anonymous_identity="anonymous@ed.ac.uk"'
+    'identity="<UUN>@ed.ac.uk"'
+    'ca_cert="/etc/ssl/certs/QuoVadis_Root_CA_2.pem"'
+    'password="<PASSWORD>"'
+    'phase1="peaplabel=0"'
+    'phase2="auth=MSCHAPV2"'
+)
