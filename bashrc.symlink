@@ -2,6 +2,9 @@
 # ~/.bashrc
 #
 
+# Set vim as default editor
+export EDITOR=vim
+
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
@@ -12,10 +15,10 @@ alias grepc='grep --color -nRHi'
 
 IGNOREEOF=1
 
+# Run an ssh agent to save the git passphrase when it is first used
 if ! pgrep -u "$USER" ssh-agent > /dev/null; then
     ssh-agent > ~/.ssh-agent-thing
 fi
 if [[ "$SSH_AGENT_PID" == "" ]]; then
-    eval "$(<~/.ssh-agent-thing)"
+    eval "$(<~/.ssh-agent-thing)" > /dev/null
 fi
-
