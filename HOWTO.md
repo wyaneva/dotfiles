@@ -30,3 +30,8 @@ When I notice this, I do the following (as advised [here](https://wiki.archlinux
 * Install **grip**: `yaourt -S python-grip-git`
 * Run: `grip [path-to-file]`
 * View in browser at `localhost:6419`
+
+### Sync Thunderbird filters
+
+The file `msgFilterRules.dat` contains the Thunderbird filters for my university account.
+It needs to be stored in `$HOME/.thunderbird/[random].default/ImapMail/.sms.ed.ac.uk/`.
