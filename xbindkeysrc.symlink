@@ -1,0 +1,11 @@
+#Increase volume
+  "amixer set Master 5%+"
+  XF86AudioRaiseVolume
+
+#Decrease volume
+  "amixer set Master 5%-"
+  XF86AudioLowerVolume
+   
+#Mute/unmute
+  "bash $HOME/dotfiles/amixer/mute-button-toggle.sh"
+  XF86AudioMute

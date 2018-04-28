@@ -23,7 +23,7 @@ When I notice this, I do the following (as advised [here](https://wiki.archlinux
 * #### to connect to Eduroam
 
   To connect to Eduroam, we need to manually add a **netctl** profile to `etc/netclt`. 
-  An example profile which works for Eduroam in Edinburgh can be found in this repository, in file `eduroam-profile`.
+  An example profile which works for Eduroam in Edinburgh can be found in this repository, in file `wifi/eduroam-profile`.
 
 ### Review markdown files
 
@@ -35,3 +35,10 @@ When I notice this, I do the following (as advised [here](https://wiki.archlinux
 
 The file `msgFilterRules.dat` contains the Thunderbird filters for my university account.
 It needs to be stored in `$HOME/.thunderbird/[random].default/ImapMail/.sms.ed.ac.uk/`.
+
+### Bind multimedia keys 
+
+* Install the **xbindkeys** package.
+* Install [ALSA](https://wiki.archlinux.org/index.php/Advanced_Linux_Sound_Architecture).
+* Make sure `.xbindkeysrc` is in the $HOME directory.
+* Run `xbindkeys -p` after every change to `.xbindkeysrc`.
