@@ -41,7 +41,10 @@ It needs to be stored in `$HOME/.thunderbird/[random].default/ImapMail/.sms.ed.a
 * Install the **xbindkeys** package.
 * Install [ALSA](https://wiki.archlinux.org/index.php/Advanced_Linux_Sound_Architecture).
 * Make sure `.xbindkeysrc` is in the $HOME directory.
+* To find the name of the key you want to bind, run `xbindkeys -k`.
+  (However, this only seems to work if the key is NOT already mapped in `.xbindkeysrc`).
 * Run `xbindkeys -p` after every change to `.xbindkeysrc`.
+* To execute **xbindkeys** at startup, add the line `xbindkeys &` to `.xinitrc` (already in this repository) OR `.xprofile` (if using a login manager).
 
 ### Mount USB/SD card
 
