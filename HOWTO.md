@@ -42,3 +42,10 @@ It needs to be stored in `$HOME/.thunderbird/[random].default/ImapMail/.sms.ed.a
 * Install [ALSA](https://wiki.archlinux.org/index.php/Advanced_Linux_Sound_Architecture).
 * Make sure `.xbindkeysrc` is in the $HOME directory.
 * Run `xbindkeys -p` after every change to `.xbindkeysrc`.
+
+### Mount USB/SD card
+
+* Inspect `dmesg` after inserting the usb/card to see which is the device.
+* For SD card: `sudo mount -t vfat /dev/mmcblk0p1 /mnt/sdcard`
+* For USB: TODO
+* To unmount: `sudo umount /mnt/sdcard`
