@@ -7,3 +7,7 @@ vim.symlink/.netrwhist*
 
 # Compiled python classes
 *.pyc
+
+# R packages
+r.xdg_cfg/library/
+!r.xdg_cfg/library/README
