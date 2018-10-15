@@ -4,6 +4,7 @@
 vim.symlink/bundle
 vim.symlink/autoload
 vim.symlink/.netrwhist*
+vim.symlink/spell/en.utf-8.add.spl
 
 # Compiled python classes
 *.pyc

@@ -18,7 +18,7 @@ When I notice this, I do the following (as advised [here](https://wiki.archlinux
   A useful blogpost on the topic can be found [here](http://blog.programmableproduction.com/2016/02/15/ArchLinux-Setting-Network-With-Netctl/).
 
   * Install **wpa_actiond**: `sudo pacman -S wpa_actiond`
-  * Enable the service for the network device: `sudo systemctl enable netclt-auto@wlp4s0.service`
+  * Enable the service for the network device: `sudo systemctl enable netctl-auto@wlp4s0.service`
 
 * #### to connect to Eduroam
 
