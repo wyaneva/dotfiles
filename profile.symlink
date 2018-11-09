@@ -1,0 +1,2 @@
+# Set printer name as uni UUN
+export CUPS_USER='s0835905'
