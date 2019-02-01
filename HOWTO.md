@@ -52,3 +52,14 @@ It needs to be stored in `$HOME/.thunderbird/[random].default/ImapMail/.sms.ed.a
 * For SD card: `sudo mount -t vfat /dev/mmcblk0p1 /mnt/sdcard`
 * For USB: TODO
 * To unmount: `sudo umount /mnt/sdcard`
+
+### Update archlinux keys
+
+* `sudo rm -r /etc/pacman.d/gnupg`
+* `sudo pacman -Sy gnupg archlinux-keyring`
+* `sudo pacman-key --init`
+* `sudo pacman-key --populate archlinux`
+* `sudo pacman-key --refresh-keys`
+* `sudo pacman -Sc` - removes old packages from cache
+* Then you can upgrade archlinux
+
