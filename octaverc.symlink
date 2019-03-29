@@ -1,0 +1,4 @@
+# Make gnuplot the default plotting backend for Octave.
+# The gnuplot package needs to be installed on Arch.
+
+graphics_toolkit("gnuplot");
