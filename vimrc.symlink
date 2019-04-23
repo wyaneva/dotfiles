@@ -27,11 +27,14 @@ call plug#begin(g:editor_root."/bundle")
 " Plugins
 " Plug 'tpope/vim-repeat'
 " Plug 'tpope/vim-unimpaired'
- Plug 'frasercrmck/formative.vim'
- Plug 'Valloric/YouCompleteMe', {
-       \   'do': './install.py --clang-completer',
-       \   'for': [ 'c', 'cpp' ]
-       \ }
+Plug 'frasercrmck/formative.vim'
+" Plug 'Valloric/YouCompleteMe', {
+"      \   'do': './install.py --clang-completer',
+"      \   'for': [ 'c', 'cpp' ]
+"      \ }
+Plug 'neoclide/coc.nvim', {
+      \ 'do': { -> coc#util#install() }
+      \ }
 
 " Colour schemes:
 Plug 'whatyouhide/vim-gotham'
