@@ -1,8 +1,12 @@
-zsh*eightBitInput: false
-zsh*saveLines: 4096
+XTerm*background: black
+XTerm*foreground: white
 
-xterm*background: black
-xterm*foreground: white
+XTerm*eightBitInput: false
+XTerm*saveLines: 4096
 
-#zsh*faceName: Liberation Mono:size=16:antialias=true
-xterm*font: 7x14
+XTerm*faceName: Source Code Pro Semibold
+XTerm*faceSize: 10
+XTerm*termName: xterm-256color
+XTerm*background: black
+XTerm*foreground: white
+XTerm*cursorColor: lightgrey

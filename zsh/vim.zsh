@@ -7,6 +7,7 @@ function accept_then_cmd {
 }
 zle -N accept_then_cmd
 
+bindkey -M isearch 'j' self-insert
 bindkey -M isearch 'jk' accept_then_cmd
 bindkey -M isearch '\e' accept_then_cmd
 
