@@ -63,3 +63,7 @@ It needs to be stored in `$HOME/.thunderbird/[random].default/ImapMail/.sms.ed.a
 * `sudo pacman -Sc` - removes old packages from cache
 * Then you can upgrade archlinux
 
+### Set screen brightness
+
+* `sudo tee /sys/class/backlight/intel_backlight/brightness <<< 850`
+** Use a value between 600 and 850
