@@ -13,4 +13,4 @@ vim.symlink/spell/en.utf-8.add.spl
 r.xdg_cfg/library/
 !r.xdg_cfg/library/README
 
-xkblayout-state/*
+xkblayout-state/
