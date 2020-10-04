@@ -50,7 +50,7 @@ It needs to be stored in `$HOME/.thunderbird/[random].default/ImapMail/.sms.ed.a
 
 * Inspect `dmesg` after inserting the usb/card to see which is the device.
 * For SD card: `sudo mount -t vfat /dev/mmcblk0p1 /mnt/sdcard`
-* For USB: TODO
+* For USB: `sudo mount /dev/sdb1 /mnt/usbdisk`
 * To unmount: `sudo umount /mnt/sdcard`
 
 ### Update archlinux keys
