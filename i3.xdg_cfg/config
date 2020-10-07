@@ -96,6 +96,9 @@ bindsym $mod+i workspace next
 # start two terminals on workspace 1
 # exec --no-startup-id "i3-msg 'workspace 1; exec i3-sensible-terminal; exec i3-sensible-terminal'"
 
+# start nm-applet on startup
+exec nm-applet
+
 # switch to workspace
 bindsym $mod+1 workspace 1
 bindsym $mod+2 workspace 2
@@ -154,3 +157,8 @@ bindsym $mod+r mode "resize"
 bar {
         status_command ~/.config/i3/i3script.sh
 }
+
+# Bind volume keys
+bindsym XF86AudioMute exec amixer -D pulse sset 'Master' toggle
+bindsym XF86AudioLowerVolume exec amixer sset 'Master' 5%-
+bindsym XF86AudioRaiseVolume exec amixer sset 'Master' 5%+

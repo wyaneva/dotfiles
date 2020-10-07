@@ -32,9 +32,7 @@ Plug 'frasercrmck/formative.vim'
 "      \   'do': './install.py --clang-completer',
 "      \   'for': [ 'c', 'cpp' ]
 "      \ }
-Plug 'neoclide/coc.nvim', {
-      \ 'do': { -> coc#util#install() }
-      \ }
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " Colour schemes:
 Plug 'whatyouhide/vim-gotham'
