@@ -53,6 +53,11 @@ It needs to be stored in `$HOME/.thunderbird/[random].default/ImapMail/.sms.ed.a
 * For USB: `sudo mount /dev/sdb1 /mnt/usbdisk`
 * To unmount: `sudo umount /mnt/sdcard`
 
+### Mount USB/SD card using udiskie
+
+* To start: `udiskie &`
+* To stop: `pkill udiskie`
+
 ### Update archlinux keys
 
 * `sudo rm -r /etc/pacman.d/gnupg`
