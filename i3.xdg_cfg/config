@@ -164,4 +164,4 @@ bindsym XF86AudioLowerVolume exec amixer sset 'Master' 5%-
 bindsym XF86AudioRaiseVolume exec amixer sset 'Master' 5%+
 
 # Set keyboard layouts
-exec --no-startup-id setxkbmap -layout gb,bg,de -variant ,phonetic, -option 'grp:ctrl_shift_toggle'
+exec --no-startup-id setxkbmap -layout gb,bg,de -variant ,phonetic, -option 'grp:alt_caps_toggle'
