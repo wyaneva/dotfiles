@@ -5,8 +5,8 @@ typeset -U config_files
 config_files=(${ZSH}/**/*.zsh)
 
 # Requires package 'zsh-syntax-highlighting'
-#source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+#source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Load everything but the completion files
 for file in ${${config_files}:#*/completion.zsh}
@@ -41,3 +41,12 @@ fi
 
 # Add local dynamic libraries to LD_LIBRARY_PATH
 export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/usr/local/lib"
+
+# Texlive
+TEXLIVE=$HOME/texlive
+export PATH=$TEXLIVE/2020/bin/x86_64-linux:$PATH
+export MANPATH=$TEXLIVE/texmf-local/doc/man:$MANPATH"
+export INFOPATH=$TEXLIVE/texmf-local/doc/info:$INFOPATH"
+
+# Switch off terminal bell
+unsetopt BEEP

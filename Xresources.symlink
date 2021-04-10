@@ -10,3 +10,40 @@ XTerm*termName: xterm-256color
 XTerm*background: black
 XTerm*foreground: white
 XTerm*cursorColor: lightgrey
+
+! Same as XTerm above
+URxvt.font: xft:Source Code Pro Semibold:size=10
+URxvt*termName: xterm-256color
+URxvt*background: black
+URxvt*foreground: white
+URxvt*cursorColor: lightgrey
+URxvt*saveLines: 1000000
+! No scroll bar
+URxvt*scrollBar: false
+! Do not scroll with output
+URxvt*scrollTtyOutput: false
+! Scroll in relation to buffer
+URxvt*scrollWithBuffer: true
+! Scroll back to the bottom on keypress
+URxvt*scrollTtyKeypress: true
+
+URxvt*color0:  #2E3436
+URxvt*color1:  #A40000
+URxvt*color2:  #4E9A06
+URxvt*color3:  #C4A000
+URxvt*color4:  #3465A4
+URxvt*color5:  #75507B
+URxvt*color6:  #CE5C00
+URxvt*color7:  #BABDB9
+URxvt*color8:  #555753
+URxvt*color9:  #EF2929
+URxvt*color10: #8AE234
+URxvt*color11: #FCE94F
+URxvt*color12: #729FCF
+URxvt*color13: #AD7FA8
+URxvt*color14: #FCAF3E
+URxvt*color15: #EEEEEC
+
+!URxvt.perl-ext-common: font-size,keyboard-select
+
+!URxvt.keysym.M-Escape: perl:keyboard-select:activate

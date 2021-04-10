@@ -1,1 +1,5 @@
 export EDITOR=vim
+TEXLIVE=/home/vanya/texlive
+export PATH=/home/vanya/texlive/bin/x86_64_linux:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl
+export MANPATH=/home/vanya/texlive/texmf-dist/doc/man:
+export INFOPATH=/home/vanya/texlive/texmf-dist/doc/info:
